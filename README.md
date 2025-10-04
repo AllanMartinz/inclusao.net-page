@@ -31,9 +31,3 @@ O site foi desenvolvido utilizando **HTML5, CSS3 e JavaScript** e contém recurs
 - **HTML5** (semântica e acessibilidade com ARIA)  
 - **CSS3** (responsividade e temas de contraste)  
 - **JavaScript (ES6+)** (controle de acessibilidade e atalhos)  
-
-## 🚀 Como Executar o Projeto
-
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/SEU-USUARIO/NOME-DO-REPO.git
