@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inclusão.net - Sobre</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header role="banner" class="site-header">
+    <div class="logo-title">
+      <img src="images/logo.png" alt="Inclusão.net logo" class="logo" />
+      <h1><a href="index.html">Inclusão.net</a></h1>
+    </div>
+    <nav role="navigation" aria-label="Primary navigation" class="main-nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about.html" aria-current="page">Sobre</a></li>
+        <li><a href="register.html">Cadastro</a></li>
+        <li><a href="accessibility.html">Acessibilidade</a></li>
+      </ul>
+    </nav>
+    <div class="header-accessibility" aria-label="Accessibility controls">
+      <button id="font-decrease" aria-label="Decrease font size" title="Decrease font size">A-</button>
+      <button id="font-increase" aria-label="Increase font size" title="Increase font size">A+</button>
+      <button id="contrast-toggle" aria-label="Toggle high contrast" title="Toggle high contrast">🌓</button>
+    </div>
+  </header>
+
+  <aside class="floating-accessibility" aria-label="Accessibility menu" aria-live="polite">
+    <button id="float-font-decrease" aria-label="Decrease font size">A-</button>
+    <button id="float-font-increase" aria-label="Increase font size">A+</button>
+    <button id="float-contrast-toggle" aria-label="Toggle high contrast">🌓</button>
+  </aside>
+
+  <main role="main" class="container">
+    <article aria-label="About the organization">
+      <h2>Sobre Inclusão.net</h2>
+      <p>
+        Somos uma organização dedicada a promover a inclusão digital, fornecendo ferramentas e recursos acessíveis
+        para todos.
+      </p>
+
+      <h3>Nossa Missão</h3>
+      <p>
+        Nossa missão é tornar o mundo digital acessível para todos, independentemente de suas limitações.
+      </p>
+
+      <h3>Nossa Visão</h3>
+      <p>
+        Queremos ser referência em inclusão digital, proporcionando acesso igualitário a todos.
+      </p>
+
+      <h3>Nossa Equipe</h3>
+      <section aria-label="Team members" class="team">
+        <ul class="team-list">
+          <li>
+            <img src="images/Teemo_League_of_Legends.webp.png" alt="Photo of Sarah Chen" class="team-photo" />
+            <strong>Allan Martins</strong><br />
+            <small>Estudante</small>
+          </li>
+        </ul>
+      </section>
+
+      <section class="social-section" aria-label="Social media links">
+        <nav>
+          <ul class="social-links">
+            <li><a href="https://github.com/AllanMartinz" target="_blank" rel="noopener" aria-label="Twitter">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/allan-martins-castilho-ferreira-9970922b4/" target="_blank" rel="noopener" aria-label="Facebook">Linkedln</a></li>
+          </ul>
+        </nav>
+      </section>
+    </article>
+  </main>
+
+  <footer role="contentinfo" class="site-footer">
+    <nav aria-label="Footer navigation" class="footer-nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about.html">Sobre</a></li>
+        <li><a href="register.html">Serviços</a></li>
+        <li><a href="about.html">Contato</a></li>
+        <li><a href="accessibility.html">Acessibilidade</a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2025 Inclusão.net. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="scripts.js" defer></script>
+</body>
+</html>

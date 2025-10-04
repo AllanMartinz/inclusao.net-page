@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inclusão.net - Acessibilidade</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header role="banner" class="site-header">
+    <div class="logo-title">
+      <img src="images/logo.png" alt="Inclusão.net logo" class="logo" />
+      <h1><a href="index.html">Inclusão.net</a></h1>
+    </div>
+    <nav role="navigation" aria-label="Primary navigation" class="main-nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about.html">Sobre</a></li>
+        <li><a href="register.html">Cadastro</a></li>
+        <li><a href="accessibility.html" aria-current="page">Acessibilidade</a></li>
+      </ul>
+    </nav>
+    <div class="header-accessibility" aria-label="Accessibility controls">
+      <button id="font-decrease" aria-label="Decrease font size" title="Decrease font size">A-</button>
+      <button id="font-increase" aria-label="Increase font size" title="Increase font size">A+</button>
+      <button id="contrast-toggle" aria-label="Toggle high contrast" title="Toggle high contrast">🌓</button>
+    </div>
+  </header>
+
+  <aside class="floating-accessibility" aria-label="Accessibility menu" aria-live="polite">
+    <button id="float-font-decrease" aria-label="Decrease font size">A-</button>
+    <button id="float-font-increase" aria-label="Increase font size">A+</button>
+    <button id="float-contrast-toggle" aria-label="Toggle high contrast">🌓</button>
+  </aside>
+
+  <main role="main" class="container accessibility-content">
+    <h2>Por Que a Acessibilidade é Importante?</h2>
+    <p>
+        A acessibilidade digital é fundamental para garantir que pessoas com diferentes habilidades e necessidades
+        possam acessar e interagir com o conteúdo do nosso site de forma independente e eficaz.   
+    </p>
+
+    <section aria-labelledby="key-features-heading" class="accessibility-features">
+      <h3 id="key-features-heading">Recursos de Acessibilidade</h3>
+      <ul>
+        <li tabindex="0"><strong>Contraste de Cores: </strong> O site utiliza uma paleta de cores com contraste elevado para facilitar a leitura de textos e identificação de elementos visuais.</li>
+        <li tabindex="0"><strong>Navegação por Teclado: </strong> Todas as áreas do site podem ser acessadas e navegadas usandoapenas o teclado, para usuários com limitações motoras.</li>
+        <li tabindex="0"><strong>Escalabilidade de Fontes: </strong> É possível aumentar o tamanho do texto para facilitar a leitura, respeitando as configurações de acessibilidade do navegador.</li>
+        <li tabindex="0"><strong>Textos Alternativos: </strong> Todas as imagens incluem textos alternativos (alt text) para garantir que leitores de tela possam descrever o conteúdo visual.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="keyboard-shortcuts-heading">
+      <h3 id="keyboard-shortcuts-heading">Atalhos de Navegação</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Tecla</th>
+            <th>Evento</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tab</td>
+            <td>Mover para o proximo elemento interativo</td>
+          </tr>
+          <tr>
+            <td>Shift + Tab</td>
+            <td>Mover para o elemento interativo anterior</td>
+          </tr>
+          <tr>
+            <td>Enter</td>
+            <td>Ativa o elemento selecionado</td>
+          </tr>
+          <tr>
+            <td>Espaço</td>
+            <td>Ativa o checkbox ou botão</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section aria-labelledby="personalization-options-heading" class="personalization-options">
+      <h3 id="personalization-options-heading">Personalização de Experiência</h3>
+      <ul>
+        <li><button id="contrast-toggle-2" class="accessibility-btn" aria-label="Toggle contrast"><span aria-hidden="true">🌓</span> Ajuste de contraste</button> - Alterne entre alto contraste e esquemas de cores padrão.</li>
+        <li><button id="font-increase-2" class="accessibility-btn" aria-label="Increase font size">A+</button> / <button id="font-decrease-2" class="accessibility-btn" aria-label="Decrease font size">A-</button> - Ajuste o tamanho da fonte ao seu nível de leitura preferido.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer role="contentinfo" class="site-footer">
+    <nav aria-label="Footer navigation" class="footer-nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about.html">Sobre</a></li>
+        <li><a href="register.html">Serviços</a></li>
+        <li><a href="about.html">Contato</a></li>
+        <li><a href="accessibility.html">Acessibilidade</a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2025 Inclusão.net. Todos os direitos reservados.</p>
+  </footer>
+
+
+  <script src="scripts.js" defer></script>
+</body>
+</html>

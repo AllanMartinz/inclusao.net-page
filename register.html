@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inclusão.net - Cadastro</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header role="banner" class="site-header">
+    <div class="logo-title">
+      <img src="images/logo.png" alt="Inclusão.net logo" class="logo" />
+      <h1><a href="index.html">Inclusão.net</a></h1>
+    </div>
+    <nav role="navigation" aria-label="Primary navigation" class="main-nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about.html">Sobre</a></li>
+        <li><a href="register.html" aria-current="page">Cadastro</a></li>
+        <li><a href="accessibility.html">Acessibilidade</a></li>
+      </ul>
+    </nav>
+    <div class="header-accessibility" aria-label="Accessibility controls">
+      <button id="font-decrease" aria-label="Decrease font size" title="Decrease font size">A-</button>
+      <button id="font-increase" aria-label="Increase font size" title="Increase font size">A+</button>
+      <button id="contrast-toggle" aria-label="Toggle high contrast" title="Toggle high contrast">🌓</button>
+    </div>
+  </header>
+
+  <aside class="floating-accessibility" aria-label="Accessibility menu" aria-live="polite">
+    <button id="float-font-decrease" aria-label="Decrease font size">A-</button>
+    <button id="float-font-increase" aria-label="Increase font size">A+</button>
+    <button id="float-contrast-toggle" aria-label="Toggle high contrast">🌓</button>
+  </aside>
+
+  <main role="main" class="container">
+    <section aria-labelledby="register-main-heading" class="register-page-form">
+      <h2 id="register-main-heading">Bem-vindo(a) a Inclusão.net</h2>
+      <form action="#" method="post" novalidate>
+        <label for="full-name-main">Nome Completo</label>
+        <input type="text" id="full-name-main" name="fullName" placeholder="Coloque seu nome completo" required autocomplete="name" />
+
+        <label for="email-main">Email</label>
+        <input type="email" id="email-main" name="email" placeholder="Coloque seu email" required autocomplete="email" />
+
+        <label for="password-main">Senha</label>
+        <input type="password" id="password-main" name="password" placeholder="Crie sua senha" required autocomplete="new-password" />
+
+        <label for="password-confirm-main">Confirme sua Senha</label>
+        <input type="password" id="password-confirm-main" name="passwordConfirm" placeholder="Confirme sua senha" required autocomplete="new-password" />
+
+        <button type="submit" class="btn-primary" aria-label="Sign up">Cadastrar</button>
+      </form>
+      <p class="signin-link">
+        Já tem uma conta? <a href="#">Entrar</a>
+      </p>
+    </section>
+  </main>
+
+  <footer role="contentinfo" class="site-footer">
+    <nav aria-label="Footer navigation" class="footer-nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about.html">Sobre</a></li>
+        <li><a href="register.html">Serviços</a></li>
+        <li><a href="about.html">Contato</a></li>
+        <li><a href="accessibility.html">Acessibilidade</a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2025 Inclusão.net. Todos os direitos reservados.</p>
+  </footer>
+
+
+  <script src="scripts.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inclusão.net - Inicio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header role="banner" class="site-header">
+    <div class="logo-title">
+      <img src="images/logo.png" alt="Inclusão.net logo" class="logo" />
+      <h1><a href="index.html">Inclusão.net</a></h1>
+    </div>
+    <nav role="navigation" aria-label="Primary navigation" class="main-nav">
+      <ul>
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="about.html">Sobre</a></li>
+        <li><a href="register.html">Cadastro</a></li>
+        <li><a href="accessibility.html">Acessibilidade</a></li>
+      </ul>
+    </nav>
+    <div class="header-accessibility" aria-label="Accessibility controls">
+      <button id="font-decrease" aria-label="Decrease font size" title="Decrease font size">A-</button>
+      <button id="font-increase" aria-label="Increase font size" title="Increase font size">A+</button>
+      <button id="contrast-toggle" aria-label="Toggle high contrast" title="Toggle high contrast">🌓</button>
+    </div>
+  </header>
+
+  <aside class="floating-accessibility" aria-label="Accessibility menu" aria-live="polite">
+    <button id="float-font-decrease" aria-label="Decrease font size">A-</button>
+    <button id="float-font-increase" aria-label="Increase font size">A+</button>
+    <button id="float-contrast-toggle" aria-label="Toggle high contrast">🌓</button>
+  </aside>
+
+  <main role="main" class="container">
+    <section class="welcome" aria-label="Welcome section">
+      <img src="images/people_discussing.jpg" alt="Two people discussing digital resources" class="welcome-img" />
+      <div class="welcome-text">
+        <h2 id="teste">Bem-vindo(a) a Inclusão.net</h2>
+        <p>
+          Nosso objetivo é promover a inclusão digital, oferecendo informações e recursos acessíveis para
+          todos. Aqui, você econtrará conteúdo, ferramentas e serviços que facilitam o acesso ao mundo
+          digital, idependente das suas necessidades ou habilidades. Queremos criar um ambiente onde todos
+          posssam navegar com facilidade e se sentir acolhidos.
+        </p>
+        <a href="about.html" class="btn-primary">Saiba mais</a>
+      </div>
+    </section>
+
+    <section aria-labelledby="register-heading" class="registration-section">
+      <h3 id="register-heading">Cadastro de Usuário</h3>
+      <form action="#" method="post" class="registration-form" aria-describedby="register-desc" novalidate>
+        <p id="register-desc" class="sr-only">Por favor preencha todos os campos.</p>
+
+        <label for="full-name">Nome Completo</label>
+        <input type="text" id="full-name" name="fullName" placeholder="Coloque seu nome completo" required autocomplete="name" />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Coloque seu email" required autocomplete="email" />
+
+        <label for="phone">Telefone</label>
+        <input type="tel" id="phone" name="phoneNumber" placeholder="Coloque seu numero de telefone" autocomplete="tel" />
+
+        <label for="password">Senha</label>
+        <input type="password" id="password" name="password" placeholder="Crie sua senha" required autocomplete="new-password" />
+
+        <button type="submit" class="btn-primary" aria-label="Register">Cadastrar</button>
+      </form>
+    </section>
+
+    <section class="social-section" aria-label="Social media links">
+      <h3>Cadastro/Login para redes-sociais</h3>
+      <p>Clique nos nomes das redes-sociais para ser mandado a pagina de cadastro/login delas.</p>
+      <nav>
+        <ul class="social-links">
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a></li>
+          <li><a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a></li>
+          <li><a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">Twitter</a></li>
+          <li><a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="Youtube">Youtube</a></li>
+          <li><a href="https://web.whatsapp.com/" target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a></li>
+          <li><a href="https://www.linkedin.com/login/pt" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a></li>
+          <li><a href="https://twitter.com" target="_blank" rel="noopener" aria-label="TikTok">TikTok</a></li>
+          <li><a href="https://www.tiktok.com/pt-BR" target="_blank" rel="noopener" aria-label="Pinterest">Pinterest</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <section aria-labelledby="feedback-heading" class="feedback-section">
+      <h3 id="feedback-heading">Feedbacks</h3>
+      <p>Seu feedback é fundamenta para melhorias continuamente. </p>
+      <form action="#" method="post" class="feedback-form" novalidate>
+        <label for="feedback-name">Nome:</label>
+        <input type="text" id="feedback-name" name="name" placeholder="Seu nome" />
+
+        <label for="feedback-comment">Comentário:</label>
+        <textarea id="feedback-comment" name="comment" rows="4" placeholder="Seu Feedback"></textarea>
+
+        <button type="submit" class="btn-primary" aria-label="Submit feedback">Enviar Feedback</button>
+      </form>
+    </section>
+
+    <section aria-label="Latest news" class="news-section">
+      <h3>Latest News</h3>
+
+      <article class="news-item">
+        <h4>Inclusão.net atualizações</h4>
+        <p>Mantenha-se informado sobre os últimos recursos de acessibilidade e atualizações.</p>
+        <a href="accessibility.html" class="btn-secondary" aria-label="Read more about Accessibility Updates">Read More</a>
+        <img src="images/wheelchair.jpg" alt="Accessibility icon with wheelchair" class="news-img" />
+      </article>
+
+      <article class="news-item">
+        <h4>Oficina digital[Desen]</h4>
+        <p>Aprenda habilidades digitais essenciais em nosso futuro workshop.</p>
+        <a href="#" class="btn-secondary" aria-label="Read more about Digital Literacy Workshop">Read More</a>
+        <img src="images/workshop.jpg" alt="People working on computers in workshop" class="news-img" />
+      </article>
+    </section>
+  </main>
+
+  <footer role="contentinfo" class="site-footer">
+    <nav aria-label="Footer navigation" class="footer-nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about.html">Sobre</a></li>
+        <li><a href="register.html">Serviços</a></li>
+        <li><a href="about.html">Contato</a></li>
+        <li><a href="accessibility.html">Acessibilidade</a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2025 Inclusão.net. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="scripts.js" defer></script>
+</body>
+</html>
