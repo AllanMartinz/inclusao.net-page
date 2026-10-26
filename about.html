@@ -1,89 +1,117 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inclusão.net - Sobre</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header role="banner" class="site-header">
-    <div class="logo-title">
-      <img src="images/logo.png" alt="Inclusão.net logo" class="logo" />
-      <h1><a href="index.html">Inclusão.net</a></h1>
-    </div>
-    <nav role="navigation" aria-label="Primary navigation" class="main-nav">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="about.html" aria-current="page">Sobre</a></li>
-        <li><a href="register.html">Cadastro</a></li>
-        <li><a href="accessibility.html">Acessibilidade</a></li>
-      </ul>
-    </nav>
-    <div class="header-accessibility" aria-label="Accessibility controls">
-      <button id="font-decrease" aria-label="Decrease font size" title="Decrease font size">A-</button>
-      <button id="font-increase" aria-label="Increase font size" title="Increase font size">A+</button>
-      <button id="contrast-toggle" aria-label="Toggle high contrast" title="Toggle high contrast">🌓</button>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <header class="site-header">
+    <div class="container header-container">
+      <div class="logo-title">
+        <img src="images/logo.png" alt="Inclusão.net logo" class="logo">
+        <h1><a href="main.html">Inclusão.net</a></h1>
+      </div>
+      <nav class="main-nav" aria-label="Navegação Principal">
+        <ul>
+          <li><a href="main.html">Início</a></li>
+          <li><a href="about.html" class="active" aria-current="page">Sobre</a></li>
+          <li><a href="register.html">Cadastro</a></li>
+          <li><a href="accessibility.html">Acessibilidade</a></li>
+        </ul>
+      </nav>
+      <div class="header-accessibility">
+        <button id="share-page" class="btn-acc" aria-label="Compartilhar esta página" title="Compartilhar página">🔗</button>
+      </div>
     </div>
   </header>
 
-  <aside class="floating-accessibility" aria-label="Accessibility menu" aria-live="polite">
-    <button id="float-font-decrease" aria-label="Decrease font size">A-</button>
-    <button id="float-font-increase" aria-label="Increase font size">A+</button>
-    <button id="float-contrast-toggle" aria-label="Toggle high contrast">🌓</button>
-  </aside>
+  <!-- Painel de Acessibilidade -->
+  <button id="acc-panel-trigger" class="acc-panel-trigger" aria-label="Abrir Painel de Acessibilidade" title="Configurações de Acessibilidade">♿</button>
+  <div id="acc-panel" class="acc-panel" role="dialog" aria-labelledby="acc-panel-title" aria-modal="true">
+    <div class="acc-panel-header">
+      <h2 id="acc-panel-title">Acessibilidade</h2>
+      <button id="close-acc-panel" class="btn-acc" aria-label="Fechar Painel">✕</button>
+    </div>
 
-  <main role="main" class="container">
-    <article aria-label="About the organization">
-      <h2>Sobre Inclusão.net</h2>
-      <p>
-        Somos uma organização dedicada a promover a inclusão digital, fornecendo ferramentas e recursos acessíveis
-        para todos.
+    <div class="acc-panel-section">
+      <h3>Tamanho do Texto</h3>
+      <div class="acc-control-group">
+        <button class="acc-btn btn-font-dec" aria-label="Diminuir texto">A-</button>
+        <button class="acc-btn btn-font-reset" aria-label="Restaurar texto">Sair</button>
+        <button class="acc-btn btn-font-inc" aria-label="Aumentar texto">A+</button>
+      </div>
+    </div>
+
+    <div class="acc-panel-section">
+      <h3>Cores e Temas</h3>
+      <div class="acc-control-group" style="flex-direction: column;">
+        <button class="acc-btn btn-theme-toggle" aria-label="Alternar Tema Claro/Escuro">🌓 Alternar Tema</button>
+        <button class="acc-btn btn-contrast-toggle" aria-label="Alternar Alto Contraste">👁️ Alto Contraste</button>
+      </div>
+    </div>
+
+    <div class="acc-panel-section">
+      <h3>Leitura e Visão</h3>
+      <div class="acc-control-group" style="flex-direction: column;">
+        <button class="acc-btn btn-readable-toggle" aria-label="Alternar Fonte Legível">📖 Fonte Legível</button>
+        <button class="acc-btn btn-spacing-toggle" aria-label="Alternar Espaçamento Amplo">↔️ Espaçamento Amplo</button>
+      </div>
+    </div>
+
+    <div class="acc-panel-section">
+      <h3>Movimento</h3>
+      <div class="acc-control-group">
+        <button class="acc-btn btn-motion-toggle" aria-label="Reduzir animações">🚫 Reduzir Movimento</button>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content" class="container">
+    <section class="about-section">
+      <h2>Sobre o Inclusão.net</h2>
+      <p style="max-width: 800px; margin: 0 auto var(--space-md);">
+        O Inclusão.net é um projeto dedicado a promover a inclusão digital, tornando informações, ferramentas e recursos web mais acessíveis para pessoas com diferentes necessidades. Acreditamos que a tecnologia deve ser um vetor de emancipação, não de exclusão.
       </p>
 
-      <h3>Nossa Missão</h3>
-      <p>
-        Nossa missão é tornar o mundo digital acessível para todos, independentemente de suas limitações.
-      </p>
+      <div class="about-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-md); margin-bottom: var(--space-lg);">
+        <div class="glass-card">
+          <h3>Nossa Missão</h3>
+          <p>Facilitar o acesso ao ambiente digital e promover uma experiência web inclusiva, removendo barreiras técnicas e informacionais para todos os usuários.</p>
+        </div>
+        <div class="glass-card">
+          <h3>Nossa Visão</h3>
+          <p>Contribuir para um ecossistema digital onde a acessibilidade seja o padrão, e não a exceção, tornando a internet um espaço verdadeiramente democrático e acolhedor.</p>
+        </div>
+      </div>
 
-      <h3>Nossa Visão</h3>
-      <p>
-        Queremos ser referência em inclusão digital, proporcionando acesso igualitário a todos.
-      </p>
-
-      <h3>Nossa Equipe</h3>
-      <section aria-label="Team members" class="team">
-        <ul class="team-list">
-          <li>
-            <img src="images/Teemo_League_of_Legends.webp.png" alt="Photo of Sarah Chen" class="team-photo" />
-            <strong>Allan Martins</strong><br />
-            <small>Estudante</small>
-          </li>
-        </ul>
-      </section>
-
-      <section class="social-section" aria-label="Social media links">
-        <nav>
-          <ul class="social-links">
-            <li><a href="https://github.com/AllanMartinz" target="_blank" rel="noopener" aria-label="Twitter">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/allan-martins-castilho-ferreira-9970922b4/" target="_blank" rel="noopener" aria-label="Facebook">Linkedln</a></li>
-          </ul>
-        </nav>
-      </section>
-    </article>
+      <div class="profile-card glass-card">
+        <img src="images/Teemo_League_of_Legends.webp.png" alt="Foto de perfil de Allan Martins" class="profile-photo">
+        <h3>Allan Martins</h3>
+        <p>Estudante e entusiasta de acessibilidade digital.</p>
+        <div class="social-links">
+          <a href="https://github.com/AllanMartinz" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
+          <a href="https://www.linkedin.com/in/allan-martins-castilho-ferreira-9970922b4/" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn</a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer role="contentinfo" class="site-footer">
-    <nav aria-label="Footer navigation" class="footer-nav">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="about.html">Sobre</a></li>
-        <li><a href="register.html">Serviços</a></li>
-        <li><a href="about.html">Contato</a></li>
-        <li><a href="accessibility.html">Acessibilidade</a></li>
-      </ul>
-    </nav>
-    <p>&copy; 2025 Inclusão.net. Todos os direitos reservados.</p>
+  <footer class="site-footer">
+    <div class="container">
+      <nav class="footer-nav" aria-label="Navegação do Rodapé">
+        <ul>
+          <li><a href="main.html">Início</a></li>
+          <li><a href="about.html">Sobre</a></li>
+          <li><a href="register.html">Cadastro</a></li>
+          <li><a href="accessibility.html">Acessibilidade</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2026 Inclusão.net. Desenvolvido para promover a equidade digital.</p>
+    </div>
   </footer>
 
   <script src="scripts.js" defer></script>

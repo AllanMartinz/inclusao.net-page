@@ -1,75 +1,164 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Inclusão.net - Cadastro</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inclusão.net - Feedback e Cadastro</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header role="banner" class="site-header">
-    <div class="logo-title">
-      <img src="images/logo.png" alt="Inclusão.net logo" class="logo" />
-      <h1><a href="index.html">Inclusão.net</a></h1>
-    </div>
-    <nav role="navigation" aria-label="Primary navigation" class="main-nav">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="about.html">Sobre</a></li>
-        <li><a href="register.html" aria-current="page">Cadastro</a></li>
-        <li><a href="accessibility.html">Acessibilidade</a></li>
-      </ul>
-    </nav>
-    <div class="header-accessibility" aria-label="Accessibility controls">
-      <button id="font-decrease" aria-label="Decrease font size" title="Decrease font size">A-</button>
-      <button id="font-increase" aria-label="Increase font size" title="Increase font size">A+</button>
-      <button id="contrast-toggle" aria-label="Toggle high contrast" title="Toggle high contrast">🌓</button>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <header class="site-header">
+    <div class="container header-container">
+      <div class="logo-title">
+        <img src="images/logo.png" alt="Inclusão.net logo" class="logo">
+        <h1><a href="main.html">Inclusão.net</a></h1>
+      </div>
+      <nav class="main-nav" aria-label="Navegação Principal">
+        <ul>
+          <li><a href="main.html">Início</a></li>
+          <li><a href="about.html">Sobre</a></li>
+          <li><a href="register.html" class="active" aria-current="page">Cadastro</a></li>
+          <li><a href="accessibility.html">Acessibilidade</a></li>
+        </ul>
+      </nav>
+      <div class="header-accessibility">
+        <button id="share-page" class="btn-acc" aria-label="Compartilhar esta página" title="Compartilhar página">🔗</button>
+      </div>
     </div>
   </header>
 
-  <aside class="floating-accessibility" aria-label="Accessibility menu" aria-live="polite">
-    <button id="float-font-decrease" aria-label="Decrease font size">A-</button>
-    <button id="float-font-increase" aria-label="Increase font size">A+</button>
-    <button id="float-contrast-toggle" aria-label="Toggle high contrast">🌓</button>
-  </aside>
+  <!-- Painel de Acessibilidade -->
+  <button id="acc-panel-trigger" class="acc-panel-trigger" aria-label="Abrir Painel de Acessibilidade" title="Configurações de Acessibilidade">♿</button>
+  <div id="acc-panel" class="acc-panel" role="dialog" aria-labelledby="acc-panel-title" aria-modal="true">
+    <div class="acc-panel-header">
+      <h2 id="acc-panel-title">Acessibilidade</h2>
+      <button id="close-acc-panel" class="btn-acc" aria-label="Fechar Painel">✕</button>
+    </div>
 
-  <main role="main" class="container">
-    <section aria-labelledby="register-main-heading" class="register-page-form">
-      <h2 id="register-main-heading">Bem-vindo(a) a Inclusão.net</h2>
-      <form action="#" method="post" novalidate>
-        <label for="full-name-main">Nome Completo</label>
-        <input type="text" id="full-name-main" name="fullName" placeholder="Coloque seu nome completo" required autocomplete="name" />
+    <div class="acc-panel-section">
+      <h3>Tamanho do Texto</h3>
+      <div class="acc-control-group">
+        <button class="acc-btn btn-font-dec" aria-label="Diminuir texto">A-</button>
+        <button class="acc-btn btn-font-reset" aria-label="Restaurar texto">Sair</button>
+        <button class="acc-btn btn-font-inc" aria-label="Aumentar texto">A+</button>
+      </div>
+    </div>
 
-        <label for="email-main">Email</label>
-        <input type="email" id="email-main" name="email" placeholder="Coloque seu email" required autocomplete="email" />
+    <div class="acc-panel-section">
+      <h3>Cores e Temas</h3>
+      <div class="acc-control-group" style="flex-direction: column;">
+        <button class="acc-btn btn-theme-toggle" aria-label="Alternar Tema Claro/Escuro">🌓 Alternar Tema</button>
+        <button class="acc-btn btn-contrast-toggle" aria-label="Alternar Alto Contraste">👁️ Alto Contraste</button>
+      </div>
+    </div>
 
-        <label for="password-main">Senha</label>
-        <input type="password" id="password-main" name="password" placeholder="Crie sua senha" required autocomplete="new-password" />
+    <div class="acc-panel-section">
+      <h3>Leitura e Visão</h3>
+      <div class="acc-control-group" style="flex-direction: column;">
+        <button class="acc-btn btn-readable-toggle" aria-label="Alternar Fonte Legível">📖 Fonte Legível</button>
+        <button class="acc-btn btn-spacing-toggle" aria-label="Alternar Espaçamento Amplo">↔️ Espaçamento Amplo</button>
+      </div>
+    </div>
 
-        <label for="password-confirm-main">Confirme sua Senha</label>
-        <input type="password" id="password-confirm-main" name="passwordConfirm" placeholder="Confirme sua senha" required autocomplete="new-password" />
+    <div class="acc-panel-section">
+      <h3>Movimento</h3>
+      <div class="acc-control-group">
+        <button class="acc-btn btn-motion-toggle" aria-label="Reduzir animações">🚫 Reduzir Movimento</button>
+      </div>
+    </div>
 
-        <button type="submit" class="btn-primary" aria-label="Sign up">Cadastrar</button>
-      </form>
-      <p class="signin-link">
-        Já tem uma conta? <a href="#">Entrar</a>
-      </p>
-    </section>
+    <div class="acc-panel-section">
+      <h3>Sistema</h3>
+      <div class="acc-control-group" style="flex-direction: column;">
+        <button class="acc-btn btn-lang-toggle" aria-label="Alternar Idioma">🌐 Idioma (PT/EN)</button>
+        <button class="acc-btn btn-reset-defaults" aria-label="Restaurar padrões de fábrica">🔄 Restaurar Padrões</button>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content" class="container">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-lg); padding: var(--space-lg) 0;">
+
+      <!-- Módulo de Cadastro -->
+      <section class="register-page-form" style="text-align: center;">
+        <div class="form-card glass-card">
+          <h2 id="reg-title">Criar Conta</h2>
+          <p style="margin-bottom: var(--space-md);">Junte-se ao Inclusão.net.</p>
+          <form id="registration-form" novalidate>
+            <div class="form-group">
+              <label for="full-name">Nome Completo</label>
+              <input type="text" id="full-name" name="fullName" required placeholder="Seu nome completo">
+              <span class="error-msg" id="error-full-name" aria-live="polite">Nome é obrigatório.</span>
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" required placeholder="email@exemplo.com">
+              <span class="error-msg" id="error-email" aria-live="polite">E-mail inválido.</span>
+            </div>
+            <div class="form-group">
+              <label for="password">Senha</label>
+              <input type="password" id="password" name="password" required placeholder="Crie sua senha">
+              <span class="error-msg" id="error-password" aria-live="polite">Senha obrigatória.</span>
+            </div>
+            <div class="form-group">
+              <label for="password-confirm">Confirmar Senha</label>
+              <input type="password" id="password-confirm" name="passwordConfirm" required placeholder="Confirme sua senha">
+              <span class="error-msg" id="error-password-confirm" aria-live="polite">As senhas não coincidem.</span>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Cadastrar</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Módulo 6: Sugestões e Relatos de Barreiras -->
+      <section class="feedback-page-form" style="text-align: center;">
+        <div class="form-card glass-card">
+          <h2 id="feedback-title">Relatar Barreiras</h2>
+          <p style="margin-bottom: var(--space-md);">Nos ajude a tornar o site mais acessível.</p>
+          <form id="feedback-form" novalidate>
+            <div class="form-group">
+              <label for="fb-name">Seu Nome (Opcional)</label>
+              <input type="text" id="fb-name" name="userName" placeholder="Como gostaria de ser chamado?">
+            </div>
+            <div class="form-group">
+              <label for="fb-type">Tipo de Problema</label>
+              <select id="fb-type" name="type" required style="width: 100%; padding: 0.8rem; border-radius: var(--radius-sm); border: var(--glass-border); background: rgba(255,255,255,0.5);">
+                <option value="">Selecione uma opção</option>
+                <option value="bug">Erro Técnico / Bug</option>
+                <option value="contrast">Dificuldade de leitura/contraste</option>
+                <option value="navigation">Problema de navegação</option>
+                <option value="suggestion">Sugestão de novo recurso</option>
+                <option value="tutorial">Pedido de novo tutorial</option>
+              </select>
+              <span class="error-msg" id="error-fb-type" aria-live="polite">Selecione o tipo de relato.</span>
+            </div>
+            <div class="form-group">
+              <label for="fb-message">Descrição do Problema</label>
+              <textarea id="fb-message" name="message" required rows="4" style="width: 100%; padding: 0.8rem; border-radius: var(--radius-sm); border: var(--glass-border); background: rgba(255,255,255,0.5);" placeholder="Descreva onde encontrou a barreira..."></textarea>
+              <span class="error-msg" id="error-fb-message" aria-live="polite">A descrição é obrigatória.</span>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Relato</button>
+          </form>
+        </div>
+      </section>
+    </div>
   </main>
 
-  <footer role="contentinfo" class="site-footer">
-    <nav aria-label="Footer navigation" class="footer-nav">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="about.html">Sobre</a></li>
-        <li><a href="register.html">Serviços</a></li>
-        <li><a href="about.html">Contato</a></li>
-        <li><a href="accessibility.html">Acessibilidade</a></li>
-      </ul>
-    </nav>
-    <p>&copy; 2025 Inclusão.net. Todos os direitos reservados.</p>
+  <footer class="site-footer">
+    <div class="container">
+      <nav class="footer-nav" aria-label="Navegação do Rodapé">
+        <ul>
+          <li><a href="main.html">Início</a></li>
+          <li><a href="about.html">Sobre</a></li>
+          <li><a href="register.html">Cadastro</a></li>
+          <li><a href="accessibility.html">Acessibilidade</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2026 Inclusão.net. Desenvolvido para promover a equidade digital.</p>
+    </div>
   </footer>
-
 
   <script src="scripts.js" defer></script>
 </body>

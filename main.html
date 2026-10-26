@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inclusão.net - Início</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <header class="site-header">
+    <div class="container header-container">
+      <div class="logo-title">
+        <img src="images/logo.png" alt="Inclusão.net logo" class="logo">
+        <h1><a href="main.html">Inclusão.net</a></h1>
+      </div>
+      <nav class="main-nav" aria-label="Navegação Principal">
+        <ul>
+          <li><a href="main.html" class="active" aria-current="page">Início</a></li>
+          <li><a href="about.html">Sobre</a></li>
+          <li><a href="register.html">Cadastro</a></li>
+          <li><a href="accessibility.html">Acessibilidade</a></li>
+        </ul>
+      </nav>
+      <div class="header-accessibility">
+        <button id="share-page" class="btn-acc" aria-label="Compartilhar esta página" title="Compartilhar página">🔗</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Painel de Acessibilidade -->
+  <button id="acc-panel-trigger" class="acc-panel-trigger" aria-label="Abrir Painel de Acessibilidade" title="Configurações de Acessibilidade">♿</button>
+  <div id="acc-panel" class="acc-panel" role="dialog" aria-labelledby="acc-panel-title" aria-modal="true">
+    <div class="acc-panel-header">
+      <h2 id="acc-panel-title">Acessibilidade</h2>
+      <button id="close-acc-panel" class="btn-acc" aria-label="Fechar Painel">✕</button>
+    </div>
+
+    <div class="acc-panel-section">
+      <h3>Tamanho do Texto</h3>
+      <div class="acc-control-group">
+        <button class="acc-btn btn-font-dec" aria-label="Diminuir texto">A-</button>
+        <button class="acc-btn btn-font-reset" aria-label="Restaurar texto">Sair</button>
+        <button class="acc-btn btn-font-inc" aria-label="Aumentar texto">A+</button>
+      </div>
+    </div>
+
+    <div class="acc-panel-section">
+      <h3>Cores e Temas</h3>
+      <div class="acc-control-group" style="flex-direction: column;">
+        <button class="acc-btn btn-theme-toggle" aria-label="Alternar Tema Claro/Escuro">🌓 Alternar Tema</button>
+        <button class="acc-btn btn-contrast-toggle" aria-label="Alternar Alto Contraste">👁️ Alto Contraste</button>
+      </div>
+    </div>
+
+    <div class="acc-panel-section">
+      <h3>Leitura e Visão</h3>
+      <div class="acc-control-group" style="flex-direction: column;">
+        <button class="acc-btn btn-readable-toggle" aria-label="Alternar Fonte Legível">📖 Fonte Legível</button>
+        <button class="acc-btn btn-spacing-toggle" aria-label="Alternar Espaçamento Amplo">↔️ Espaçamento Amplo</button>
+      </div>
+    </div>
+
+    <div class="acc-panel-section">
+      <h3>Movimento</h3>
+      <div class="acc-control-group">
+        <button class="acc-btn btn-motion-toggle" aria-label="Reduzir animações">🚫 Reduzir Movimento</button>
+      </div>
+    </div>
+
+    <div class="acc-panel-section">
+      <h3>Sistema</h3>
+      <div class="acc-control-group" style="flex-direction: column;">
+        <button class="acc-btn btn-lang-toggle" aria-label="Alternar Idioma">🌐 Idioma (PT/EN)</button>
+        <button class="acc-btn btn-reset-defaults" aria-label="Restaurar padrões de fábrica">🔄 Restaurar Padrões</button>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content" class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <h2 style="font-size: clamp(2rem, 5vw, 3rem);">Tecnologia para Todos, <br>Acesso para Cada Um.</h2>
+        <p>O Inclusão.net promove a inclusão digital, transformando barreiras em pontes. Oferecemos recursos e orientações para que o mundo digital seja um lugar acolhedor e acessível para todas as pessoas.</p>
+        <div class="hero-btns">
+          <a href="about.html" class="btn btn-primary">Conhecer o Projeto</a>
+          <a href="accessibility.html" class="btn btn-secondary">Recursos de Acessibilidade</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="images/people_discussing.jpg" alt="Pessoas colaborando em recursos digitais inclusivos">
+      </div>
+    </section>
+
+    <section class="module-section" aria-labelledby="tools-title">
+      <h2 id="tools-title" class="module-title">Central de Ferramentas Úteis</h2>
+      <div class="resource-grid">
+        <div class="glass-card resource-card">
+          <h3>Conversão de Documentos</h3>
+          <p>Converta PDFs e outros arquivos de forma gratuita e acessível.</p>
+          <a href="https://www.ilovepdf.com/pt" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Acessar Ferramenta</a>
+        </div>
+        <div class="glass-card resource-card">
+          <h3>Texto em Voz Alta (TTS)</h3>
+          <p>Transforme textos escritos em áudio para facilitar a leitura.</p>
+          <a href="https://naturalreaders.com/online/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Experimentar</a>
+        </div>
+        <div class="glass-card resource-card">
+          <h3>Verificador de Contraste</h3>
+          <p>Analise se as cores do seu site atendem aos padrões de acessibilidade.</p>
+          <a href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Verificar Cores</a>
+        </div>
+        <div class="glass-card resource-card">
+          <h3>Compressão de Imagens</h3>
+          <p>Reduza o tamanho de imagens para carregamentos mais rápidos.</p>
+          <a href="https://tinypng.com/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Comprimir Agora</a>
+        </div>
+        <div class="glass-card resource-card">
+          <h3>Teste de Velocidade</h3>
+          <p>Verifique a qualidade da sua conexão com a internet.</p>
+          <a href="https://www.speedtest.net/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Testar Velocidade</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="module-section" aria-labelledby="library-title">
+      <h2 id="library-title" class="module-title">Biblioteca de Recursos</h2>
+      <div class="resource-grid">
+        <div class="glass-card resource-card">
+          <h3>Guias de Acessibilidade</h3>
+          <p>Manuais completos em PDF para desenvolvedores e usuários finais.</p>
+          <a href="#" class="btn btn-secondary">Baixar Guia PDF</a>
+        </div>
+        <div class="glass-card resource-card">
+          <h3>Checklists de Verificação</h3>
+          <p>Listas práticas para garantir a inclusão em seus projetos digitais.</p>
+          <a href="#" class="btn btn-secondary">Baixar Checklist</a>
+        </div>
+        <div class="glass-card resource-card">
+          <h3>Materiais Educativos</h3>
+          <p>Vídeos e artigos sobre a importância da equidade digital.</p>
+          <a href="accessibility.html" class="btn btn-secondary">Ver Materiais</a>
+        </div>
+        <div class="glass-card resource-card">
+          <h3>Links de Referência</h3>
+          <p>Acesso rápido a organizações como W3C e WCAG.</p>
+          <a href="https://www.w3.org/WAI/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Visitar W3C</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-teaser" style="padding: var(--space-lg) 0; text-align: center;">
+      <div class="glass-card" style="max-width: 800px; margin: 0 auto;">
+        <h2>Por que a inclusão digital importa?</h2>
+        <p>O acesso à informação e às ferramentas digitais não é mais um luxo, mas um direito fundamental. O Inclusão.net nasceu para democratizar esse conhecimento, garantindo que ninguém seja deixado para trás na era da informação.</p>
+        <a href="about.html" class="btn btn-primary" style="margin-top: var(--space-md);">Descubra nossa Missão</a>
+      </div>
+    </section>
+
+    <section class="social-section" aria-labelledby="social-title">
+      <h2 id="social-title" style="text-align: center; margin-bottom: var(--space-md);">Conecte-se com a gente</h2>
+      <div class="social-grid">
+        <a href="https://github.com/AllanMartinz" target="_blank" rel="noopener noreferrer" class="social-card" aria-label="Siga-nos no GitHub">
+          <img src="https://cdn-icons-png.flaticon.com/512/25/25201.png" alt="" aria-hidden="true" class="social-icon">
+          <span>GitHub</span>
+          <small>Código e Colaboração</small>
+        </a>
+        <a href="https://www.linkedin.com/in/allan-martins-castilho-ferreira-9970922b4/" target="_blank" rel="noopener noreferrer" class="social-card" aria-label="Siga-nos no LinkedIn">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="" aria-hidden="true" class="social-icon">
+          <span>LinkedIn</span>
+          <small>Rede Profissional</small>
+        </a>
+        <a href="mailto:contato@inclusao.net" class="social-card" aria-label="Envie um e-mail">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="" aria-hidden="true" class="social-icon">
+          <span>E-mail</span>
+          <small>Contato Oficial</small>
+        </a>
+        <a href="#" class="social-card" style="opacity: 0.5; pointer-events: none;" aria-label="YouTube (Não configurado)">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="" aria-hidden="true" class="social-icon">
+          <span>YouTube</span>
+          <small>Conteúdo em Vídeo</small>
+        </a>
+        <a href="#" class="social-card" style="opacity: 0.5; pointer-events: none;" aria-label="Instagram (Não configurado)">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="" aria-hidden="true" class="social-icon">
+          <span>Instagram</span>
+          <small>Visual e Inspiração</small>
+        </a>
+        <a href="#" class="social-card" style="opacity: 0.5; pointer-events: none;" aria-label="X (Não configurado)">
+          <img src="https://cdn-icons-png.flaticon.com/512/5969/5969020.png" alt="" aria-hidden="true" class="social-icon">
+          <span>X (Twitter)</span>
+          <small>Notícias Rápidas</small>
+        </a>
+        <a href="#" class="social-card" style="opacity: 0.5; pointer-events: none;" aria-label="WhatsApp (Não configurado)">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="" aria-hidden="true" class="social-icon">
+          <span>WhatsApp</span>
+          <small>Contato Direto</small>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <nav class="footer-nav" aria-label="Navegação do Rodapé">
+        <ul>
+          <li><a href="main.html">Início</a></li>
+          <li><a href="about.html">Sobre</a></li>
+          <li><a href="register.html">Cadastro</a></li>
+          <li><a href="accessibility.html">Acessibilidade</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2026 Inclusão.net. Desenvolvido para promover a equidade digital.</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js" defer></script>
+</body>
+</html>

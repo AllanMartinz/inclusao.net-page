@@ -1,107 +1,202 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inclusão.net - Acessibilidade</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header role="banner" class="site-header">
-    <div class="logo-title">
-      <img src="images/logo.png" alt="Inclusão.net logo" class="logo" />
-      <h1><a href="index.html">Inclusão.net</a></h1>
-    </div>
-    <nav role="navigation" aria-label="Primary navigation" class="main-nav">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="about.html">Sobre</a></li>
-        <li><a href="register.html">Cadastro</a></li>
-        <li><a href="accessibility.html" aria-current="page">Acessibilidade</a></li>
-      </ul>
-    </nav>
-    <div class="header-accessibility" aria-label="Accessibility controls">
-      <button id="font-decrease" aria-label="Decrease font size" title="Decrease font size">A-</button>
-      <button id="font-increase" aria-label="Increase font size" title="Increase font size">A+</button>
-      <button id="contrast-toggle" aria-label="Toggle high contrast" title="Toggle high contrast">🌓</button>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <header class="site-header">
+    <div class="container header-container">
+      <div class="logo-title">
+        <img src="images/logo.png" alt="Inclusão.net logo" class="logo">
+        <h1><a href="main.html">Inclusão.net</a></h1>
+      </div>
+      <nav class="main-nav" aria-label="Navegação Principal">
+        <ul>
+          <li><a href="main.html">Início</a></li>
+          <li><a href="about.html">Sobre</a></li>
+          <li><a href="register.html">Cadastro</a></li>
+          <li><a href="accessibility.html" class="active" aria-current="page">Acessibilidade</a></li>
+        </ul>
+      </nav>
+      <div class="header-accessibility">
+        <button id="share-page" class="btn-acc" aria-label="Compartilhar esta página" title="Compartilhar página">🔗</button>
+      </div>
     </div>
   </header>
 
-  <aside class="floating-accessibility" aria-label="Accessibility menu" aria-live="polite">
-    <button id="float-font-decrease" aria-label="Decrease font size">A-</button>
-    <button id="float-font-increase" aria-label="Increase font size">A+</button>
-    <button id="float-contrast-toggle" aria-label="Toggle high contrast">🌓</button>
-  </aside>
+  <!-- Painel de Acessibilidade -->
+  <button id="acc-panel-trigger" class="acc-panel-trigger" aria-label="Abrir Painel de Acessibilidade" title="Configurações de Acessibilidade">♿</button>
+  <div id="acc-panel" class="acc-panel" role="dialog" aria-labelledby="acc-panel-title" aria-modal="true">
+    <div class="acc-panel-header">
+      <h2 id="acc-panel-title">Acessibilidade</h2>
+      <button id="close-acc-panel" class="btn-acc" aria-label="Fechar Painel">✕</button>
+    </div>
 
-  <main role="main" class="container accessibility-content">
-    <h2>Por Que a Acessibilidade é Importante?</h2>
-    <p>
-        A acessibilidade digital é fundamental para garantir que pessoas com diferentes habilidades e necessidades
-        possam acessar e interagir com o conteúdo do nosso site de forma independente e eficaz.   
-    </p>
+    <div class="acc-panel-section">
+      <h3>Tamanho do Texto</h3>
+      <div class="acc-control-group">
+        <button class="acc-btn btn-font-dec" aria-label="Diminuir texto">A-</button>
+        <button class="acc-btn btn-font-reset" aria-label="Restaurar texto">Sair</button>
+        <button class="acc-btn btn-font-inc" aria-label="Aumentar texto">A+</button>
+      </div>
+    </div>
 
-    <section aria-labelledby="key-features-heading" class="accessibility-features">
-      <h3 id="key-features-heading">Recursos de Acessibilidade</h3>
-      <ul>
-        <li tabindex="0"><strong>Contraste de Cores: </strong> O site utiliza uma paleta de cores com contraste elevado para facilitar a leitura de textos e identificação de elementos visuais.</li>
-        <li tabindex="0"><strong>Navegação por Teclado: </strong> Todas as áreas do site podem ser acessadas e navegadas usandoapenas o teclado, para usuários com limitações motoras.</li>
-        <li tabindex="0"><strong>Escalabilidade de Fontes: </strong> É possível aumentar o tamanho do texto para facilitar a leitura, respeitando as configurações de acessibilidade do navegador.</li>
-        <li tabindex="0"><strong>Textos Alternativos: </strong> Todas as imagens incluem textos alternativos (alt text) para garantir que leitores de tela possam descrever o conteúdo visual.</li>
-      </ul>
+    <div class="acc-panel-section">
+      <h3>Cores e Temas</h3>
+      <div class="acc-control-group" style="flex-direction: column;">
+        <button class="acc-btn btn-theme-toggle" aria-label="Alternar Tema Claro/Escuro">🌓 Alternar Tema</button>
+        <button class="acc-btn btn-contrast-toggle" aria-label="Alternar Alto Contraste">👁️ Alto Contraste</button>
+      </div>
+    </div>
+
+    <div class="acc-panel-section">
+      <h3>Leitura e Visão</h3>
+      <div class="acc-control-group" style="flex-direction: column;">
+        <button class="acc-btn btn-readable-toggle" aria-label="Alternar Fonte Legível">📖 Fonte Legível</button>
+        <button class="acc-btn btn-spacing-toggle" aria-label="Alternar Espaçamento Amplo">↔️ Espaçamento Amplo</button>
+      </div>
+    </div>
+
+    <div class="acc-panel-section">
+      <h3>Movimento</h3>
+      <div class="acc-control-group">
+        <button class="acc-btn btn-motion-toggle" aria-label="Reduzir animações">🚫 Reduzir Movimento</button>
+      </div>
+    </div>
+
+    <div class="acc-panel-section">
+      <h3>Sistema</h3>
+      <div class="acc-control-group" style="flex-direction: column;">
+        <button class="acc-btn btn-lang-toggle" aria-label="Alternar Idioma">🌐 Idioma (PT/EN)</button>
+        <button class="acc-btn btn-reset-defaults" aria-label="Restaurar padrões de fábrica">🔄 Restaurar Padrões</button>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content" class="container" style="padding: var(--space-lg) 0;">
+    <section style="text-align: center; margin-bottom: var(--space-lg);">
+      <h2>Portal de Acessibilidade e Aprendizado</h2>
+      <p style="max-width: 800px; margin: 0 auto var(--space-md);">
+        Explore nosso laboratório interativo e aprenda como tornar a internet um lugar mais inclusivo para todos.
+      </p>
     </section>
 
-    <section aria-labelledby="keyboard-shortcuts-heading">
-      <h3 id="keyboard-shortcuts-heading">Atalhos de Navegação</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Tecla</th>
-            <th>Evento</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Tab</td>
-            <td>Mover para o proximo elemento interativo</td>
-          </tr>
-          <tr>
-            <td>Shift + Tab</td>
-            <td>Mover para o elemento interativo anterior</td>
-          </tr>
-          <tr>
-            <td>Enter</td>
-            <td>Ativa o elemento selecionado</td>
-          </tr>
-          <tr>
-            <td>Espaço</td>
-            <td>Ativa o checkbox ou botão</td>
-          </tr>
-        </tbody>
-      </table>
+    <!-- Módulo 3: Laboratório de Acessibilidade -->
+    <section class="module-section" aria-labelledby="lab-title">
+      <h2 id="lab-title" class="module-title">Laboratório Interativo</h2>
+      <div class="lab-grid">
+        <div class="glass-card lab-card">
+          <h3>Simulador de Texto</h3>
+          <p>Ajuste o tamanho da fonte para entender a importância da escalabilidade.</p>
+          <div class="lab-controls">
+            <button class="acc-btn lab-font-btn" data-size="12px">Pequeno</button>
+            <button class="acc-btn lab-font-btn" data-size="16px">Médio</button>
+            <button class="acc-btn lab-font-btn" data-size="24px">Grande</button>
+          </div>
+          <div class="lab-demo-box">Este é um exemplo de texto para testar o tamanho da fonte.</div>
+        </div>
+        <div class="glass-card lab-card">
+          <h3>Comparador de Contraste</h3>
+          <p>Veja como diferentes cores afetam a legibilidade do texto.</p>
+          <div class="lab-controls">
+            <button class="acc-btn lab-contrast-btn" data-color="#FFFFFF" data-text="#000000">Claro</button>
+            <button class="acc-btn lab-contrast-btn" data-color="#000000" data-text="#FFFFFF">Escuro</button>
+            <button class="acc-btn lab-contrast-btn" data-color="#f0f0f0" data-text="#777777">Baixo Contraste</button>
+            <button class="acc-btn lab-contrast-btn" data-color="#00008B" data-text="#FFFF00" >Alto Contraste</button>
+          </div>
+          <div class="lab-demo-box">O contraste correto salva a experiência do usuário.</div>
+        </div>
+      </div>
     </section>
 
-    <section aria-labelledby="personalization-options-heading" class="personalization-options">
-      <h3 id="personalization-options-heading">Personalização de Experiência</h3>
-      <ul>
-        <li><button id="contrast-toggle-2" class="accessibility-btn" aria-label="Toggle contrast"><span aria-hidden="true">🌓</span> Ajuste de contraste</button> - Alterne entre alto contraste e esquemas de cores padrão.</li>
-        <li><button id="font-increase-2" class="accessibility-btn" aria-label="Increase font size">A+</button> / <button id="font-decrease-2" class="accessibility-btn" aria-label="Decrease font size">A-</button> - Ajuste o tamanho da fonte ao seu nível de leitura preferido.</li>
-      </ul>
+    <!-- Módulo 2: Guias e Tutoriais -->
+    <section class="module-section" aria-labelledby="tutorials-title">
+      <h2 id="tutorials-title" class="module-title">Guias e Tutoriais Passo a Passo</h2>
+      <div class="tutorial-container">
+        <div class="tutorial-item">
+          <button class="tutorial-header" aria-expanded="false">
+            <span>Como utilizar leitores de tela</span>
+            <span>▾</span>
+          </button>
+          <div class="tutorial-content">
+            <p>Leitores de tela são softwares que convertem o texto da tela em voz ou braille. Para começar:</p>
+            <ol style="margin-left: var(--space-sm);">
+              <li>Ative o NVDA (Windows) ou VoiceOver (Mac/iOS).</li>
+              <li>Use a tecla <strong>Tab</strong> para navegar entre links.</li>
+              <li>Ouça as descrições das imagens (Alt Text) para entender o conteúdo visual.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="tutorial-item">
+          <button class="tutorial-header" aria-expanded="false">
+            <span>Como navegar com segurança na Internet</span>
+            <span>▾</span>
+          </button>
+          <div class="tutorial-content">
+            <p>A segurança digital é fundamental para a inclusão:</p>
+            <ul>
+              <li>Verifique se o site possui o cadeado (HTTPS) na barra de endereço.</li>
+              <li>Nunca compartilhe senhas por e-mail ou redes sociais.</li>
+              <li>Desconfie de promoções exageradas e links suspeitos.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tutorial-item">
+          <button class="tutorial-header" aria-expanded="false">
+            <span>Como criar um e-mail acessívelmente</span>
+            <span>▾</span>
+          </button>
+          <div class="tutorial-content">
+            <p>O e-mail é a porta de entrada para a vida digital:</p>
+            <ol>
+              <li>Escolha um provedor confiável (como Gmail ou Outlook).</li>
+              <li>Siga as instruções de cadastro usando a navegação por teclado.</li>
+              <li>Configure a recuperação de conta para não perder o acesso.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="tutorial-item">
+          <button class="tutorial-header" aria-expanded="false">
+            <span>Recursos de Acessibilidade no Windows e Celular</span>
+            <span>▾</span>
+          </button>
+          <div class="tutorial-content">
+            <p>Seu dispositivo já possui ferramentas integradas:</p>
+            <ul>
+              <li><strong>Windows:</strong> Tecla <code>Win + +</code> para a Lupa.</li>
+              <li><strong>iOS:</strong> Ajustes > Acessibilidade > Texto Maior.</li>
+              <li><strong>Android:</strong> Configurações > Acessibilidade > Selecionar para ouvir.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top: var(--space-lg); text-align: center;" class="demo-controls">
+      <h3>Sua experiência é importante</h3>
+      <p style="margin-bottom: var(--space-md);">Ainda encontra barreiras? Conte para nós na página de cadastro.</p>
+      <a href="register.html" class="btn btn-primary">Relatar Barreira</a>
     </section>
   </main>
 
-  <footer role="contentinfo" class="site-footer">
-    <nav aria-label="Footer navigation" class="footer-nav">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="about.html">Sobre</a></li>
-        <li><a href="register.html">Serviços</a></li>
-        <li><a href="about.html">Contato</a></li>
-        <li><a href="accessibility.html">Acessibilidade</a></li>
-      </ul>
-    </nav>
-    <p>&copy; 2025 Inclusão.net. Todos os direitos reservados.</p>
+  <footer class="site-footer">
+    <div class="container">
+      <nav class="footer-nav" aria-label="Navegação do Rodapé">
+        <ul>
+          <li><a href="main.html">Início</a></li>
+          <li><a href="about.html">Sobre</a></li>
+          <li><a href="register.html">Cadastro</a></li>
+          <li><a href="accessibility.html">Acessibilidade</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2026 Inclusão.net. Desenvolvido para promover a equidade digital.</p>
+    </div>
   </footer>
-
 
   <script src="scripts.js" defer></script>
 </body>
